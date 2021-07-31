@@ -131,7 +131,7 @@ Your bot is on your server, but it is disconnected. Don't worry, this is normal.
   
 - Install npm if you haven't already done it.  
 - Put the .env file with your **TOKEN** and your cluster link into the root of the repository, next to the _config.js_ file.
-- Your .env file must be named ".env" and it should have 2 lines of code:
+- Your .env file must be named ".env" and it should have 2 lines of code representing the TOKEN and DBCONNECTION variables. Don't use other variable names, because they are used in the config.js file.
 ```sh
 TOKEN=your_bot_token
 DBCONNECTION=your_link_to_mongodb
