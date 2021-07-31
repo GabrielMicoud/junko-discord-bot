@@ -138,3 +138,6 @@ DBCONNECTION=your_link_to_mongodb
 ```
 - Open a terminal at the root of your repository, and run "npm install". It should install all your dependencies (mongoose, dotenv and discord.js) or update them.
 - Run "npm start". It should print some logs as "Mongoose connected successfully" and "Connected as <your_bot_name>". If so, congrats, your bot is successfully installed.
+  
+  
+Your bot should now be connected and responding to commands such as _j!help_. If not, contact _Gaby #6272_ (the creator's Discord nickname) or join the [support server](https://discord.gg/sYsyfvDT3u). You may be surprised by the french language, but i can help you in english if you want.
