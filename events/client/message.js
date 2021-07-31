@@ -38,8 +38,8 @@ module.exports = async (client, message) => {
         return message.channel.send(noArgsReply);
     };
 
-    if(command.help.isUserAdmin && !message.member.hasPermission('ADMINISTRATOR')){ //on vérifie si l'utilisateur a bien le droit de taper la commande
-        return message.channel.send(`Aïe... ${message.author} il te faut la permission \`Administrateur\` pour pouvoir utiliser cette commande.`)
+    if(command.help.isUserAdmin && !message.member.hasPermission('MANAGE_MESSAGES')){ //on vérifie si l'utilisateur a bien le droit de taper la commande
+        return message.channel.send(`Aïe... ${message.author} il te faut la permission \`Gérer les messages\` pour pouvoir utiliser cette commande.`)
     }
     
     //set et vérification des cooldowns
