@@ -1,6 +1,6 @@
 # Junko Discord Bot
 
-This is a simple bot with a bit of Junko (Touhou)'s personality. It only reacts in french for french messages for now. But maybe i will improve it later.
+This is a simple bot with a bit of Junko (Touhou Project)'s personality. It only reacts in french for french messages for now. But maybe i will improve it later.
 
 ## It has 6 functions:
 
