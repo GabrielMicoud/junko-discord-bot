@@ -1,6 +1,6 @@
 # Junko Discord Bot
 
-This is a simple bot with a bit of Junko's personality. It only reacts in french for french messages for now. But maybe i will improve it later.
+This is a simple bot with a bit of Junko (Touhou)'s personality. It only reacts in french for french messages for now. But maybe i will improve it later.
 
 ## It has 6 functions:
 
@@ -95,3 +95,46 @@ j!config direply <on/off (optional)>
 ```sh
 j!config pingreply <on/off (optional)>
 ```
+
+# Installation
+
+To run this bot correctly, there are 3 steps:
+
+## 1 - Create your bot in [discord developer portal](https://discord.com/developers/applications)
+
+- Name it in the _General information_ panel.
+- Click 'Add Bot' in the _Bot_ panel, you will have access to some interesting information, like your **TOKEN**.
+- Remember (copy) the **TOKEN** and save it on a .env file on your PC, then check the 'Presence intent' and 'Server members intent' boxes in the _Bot_ panel.
+- In the _OAuth2_ panel, check the 'bot' box, then check 'Administrator' permission. 
+- Copy the link (https://discord.com/api/oauth2/authorize?client_id=your_bot_id&permissions=8&scope=bot) and paste it into a browser to invite your bot on your server.
+
+Your bot is on your server, but it is disconnected. Don't worry, this is normal.
+
+## 2 - Initiate your MongoDB database
+
+#### _Option 1: locally_
+
+- Download and install the latest stable version of [MongoDB Compass](https://www.mongodb.com/try/download/compass). Just follow the default installation.
+- Run MongoDB Compass, you will normally have a _New connection_ panel with an empty URL field. Type 'mongodb://localhost:27017/junko' in it, then click 'Connect'.
+
+#### _Option 2: on the cloud_
+
+- Create your free MongoDB account, then create a project. 
+- On your project, create a free shared cluster. The provisioning can take several minutes.
+- Once it's created, click on the 'Connect' button. This will show a configuration panel with 2 steps.
+- First, add an IP address. You can click the 'Allow Access from Anywhere' to set the IP address to '0.0.0.0/0', it doesn't matter.
+- Then, create a database user. Choose your username (usually _gcknroot_) and your password. **Remember them**, you will need it later.
+- Move into the next panel by clicking 'Choose a connection method', then choose 'Connect your application'.
+- Select the Node.js driver (version 3.7 or later) and copy the link into the same file as the bot **TOKEN**. Replace the <password> field with your actual cluster password.
+  
+## 3 - Download the repository and put it on your PC
+  
+- Install npm if you haven't already done it.  
+- Put the .env file with your **TOKEN** and your cluster link into the root of the repository, next to the _config.js_ file.
+- Your .env file must be named ".env" and it should have 2 lines of code:
+```sh
+TOKEN=your_bot_token
+DBCONNECTION=your_link_to_mongodb
+```
+- Open a terminal at the root of your repository, and run "npm install". It should install all your dependencies (mongoose, dotenv and discord.js) or update them.
+- Run "npm start". It should print some logs as "Mongoose connected successfully" and "Connected as <your_bot_name>". If so, congrats, your bot is successfully installed.
