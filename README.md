@@ -47,7 +47,7 @@ It reacts by sending a generic embed. The title has a link to a [Pure Furies - W
 ```sh
 j!config
 ```
-This is a command made for administrators. It requires the '_Administrator_' permission to work correctly.
+This is a command made for administrators and moderators. It requires the '_Manage messages_' permission to work correctly.
 It can work with and without arguments.
 
 If you type j!config without arguments, it will display the ⑨ configuration **sub commands**:
