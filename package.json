@@ -1,0 +1,28 @@
+{
+  "name": "junko_discord_bot",
+  "version": "0.1.0",
+  "description": "ANGRY MOM BOT",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./main.js"
+  },
+  "keywords": [
+    "junko",
+    "discord",
+    "bot"
+  ],
+  "author": "Gaby #6272 (Gabriel Micoud)",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "mongoose": "^5.13.3"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
