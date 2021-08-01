@@ -45,7 +45,7 @@ const MESSAGES = {
         ADMIN: {
             CONFIG: {
                 name: 'config',
-                description: 'Modifie les paramètres du bot sur ce serveur. Cette commande n\'est accessible que pour les membres ayant la permission \`Administrateur\`. \n\nUtilisez-la sans les champs optionnels pour plus de détails.',
+                description: 'Modifie les paramètres du bot sur ce serveur. Cette commande n\'est accessible que pour les membres ayant la permission \`Gérer les messages\`. \n\nUtilisez-la sans les champs optionnels pour plus de détails.',
                 argsNeeded: false,
                 usage: "<commande de config (optionnel)> <valeur (optionnel)>.",
                 cooldown: 3,

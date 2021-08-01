@@ -14,7 +14,7 @@ module.exports = async (client, message) => {
     if(message.author.bot) return;
     if(message.content.toUpperCase().includes('DI') && settings.diReplyEnabled) di(client, message);
     if(message.content.toUpperCase().includes('LUNE') && settings.moonReplyEnabled) moon(client, message);
-    if((message.mentions.has("857955014220054579")||message.mentions.has("870062013890592769")) && !message.member.hasPermission('MANAGE_MESSAGES') && settings.pingReplyEnabled) pingreply(client, message);
+    if((message.mentions.has("857955014220054579")||message.mentions.has("870062013890592769")) && settings.pingReplyEnabled) pingreply(client, message);
 
     //COMMANDES
 
@@ -39,7 +39,7 @@ module.exports = async (client, message) => {
     };
 
     if(command.help.isUserAdmin && !message.member.hasPermission('MANAGE_MESSAGES')){ //on vérifie si l'utilisateur a bien le droit de taper la commande
-        return message.channel.send(`Aïe... ${message.author} il te faut la permission \`Gérer les messages\` pour pouvoir utiliser cette commande.`)
+        return message.channel.send(`Aïe... ${message.author} il te faut la permission \`Gérer les messages\` pour pouvoir utiliser cette commande.`);
     }
     
     //set et vérification des cooldowns
